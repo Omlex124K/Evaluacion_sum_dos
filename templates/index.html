@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 text-center mb-4">
+        <h2>Catálogo de Películas</h2>
+        <p>Haz clic en un género para ingresar y ver sus películas.</p>
+    </div>
+
+    <div class="col-12">
+        <!-- COMPONENTE 1: Acordeón para listar los géneros -->
+        <div class="accordion" id="acordeonGeneros">
+            
+            {% for key, genero in generos.items %}
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading-{{ key }}">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-{{ key }}">
+                            <strong>{{ genero.titulo }}</strong> &nbsp;- {{ genero.descripcion }}
+                        </button>
+                    </h2>
+                    
+                    <div id="collapse-{{ key }}" class="accordion-collapse collapse" data-bs-parent="#acordeonGeneros">
+                        <div class="accordion-body bg-light">
+                            
+                            <!-- COMPONENTE 2: Cards para mostrar las películas de este género -->
+                            <div class="row">
+                                {% for pelicula in genero.peliculas %}
+                                    <div class="col-md-6 mb-3">
+                                        <div class="card h-100 shadow-sm">
+                                            <img src="{% static pelicula.imagen %}" class="card-img-top" alt="{{ pelicula.nombre }}" style="height: 250px; object-fit: cover;">
+                                            <div class="card-body">
+                                                <h5 class="card-title">{{ pelicula.nombre }}</h5>
+                                                <span class="badge bg-secondary">Edad: {{ pelicula.edad }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+{% endblock %}
