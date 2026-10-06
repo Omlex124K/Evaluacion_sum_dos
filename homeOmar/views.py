@@ -6,16 +6,16 @@ def index(request):
             'titulo': 'Acción y Suspenso (Omar)',
             'descripcion': 'Películas llenas de adrenalina y persecuciones.',
             'peliculas': [
-                {'nombre': 'John Wick 4', 'edad': '+16', 'imagen': 'images/accion1.jpg'},
-                {'nombre': 'Mad Max', 'edad': '+18', 'imagen': 'images/accion2.jpg'},
+                {'nombre': 'John Wick 4', 'edad': '+16', 'imagen': 'images/JhonWik.jpg'},
+                {'nombre': 'Mad Max', 'edad': '+18', 'imagen': 'images/MadMax.jpg'},
             ]
         },
         'scifi': {
             'titulo': 'Ciencia Ficción (Omar)',
             'descripcion': 'Explora universos paralelos y futuros lejanos.',
             'peliculas': [
-                {'nombre': 'Interstellar', 'edad': '+13', 'imagen': 'images/scifi1.jpg'},
-                {'nombre': 'Matrix', 'edad': '+16', 'imagen': 'images/scifi2.jpg'},
+                {'nombre': 'Interstellar', 'edad': '+13', 'imagen': 'images/Interestelar.jpg'},
+                {'nombre': 'Matrix', 'edad': '+16', 'imagen': 'images/Matrix.jpg'},
             ]
         }
     }

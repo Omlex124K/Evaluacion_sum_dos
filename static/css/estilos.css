@@ -1,0 +1,19 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.accordion-button {
+    background-color: #e9ecef;
+    font-weight: bold;
+}
+
+.card {
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+body { background-color: #f8f9fa; }
+.accordion-button { font-weight: bold; }
